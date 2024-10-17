@@ -16,6 +16,9 @@ export default function AllProducts() {
           <div key={index} className='product-card'>
             <img src={product.image} alt={product.model} />
             <h2>{product.brand} {product.model}</h2>
+            <Link to={`/products/${product.model}`}>
+              <h2>{product.brand} {product.model}</h2>
+            </Link>
             <p>Price: ${product.price}</p>
             <p>{product.description}</p>
             <p style={{ color: product.inStock ? 'green' : 'red' }}>
